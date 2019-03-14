@@ -4,24 +4,83 @@
 	<meta charset="utf-8">
 
 	<title>Virtual Keyboard Basic Demo</title>
-	<script src="jquery-latest.min.js"></script>
-	<script src="jquery-ui.min.js"></script>
 	<link href="keyboard.css" rel="stylesheet">
 	<script src="jquery.keyboard.js"></script>
-	<script src="jquery.mousewheel.js"></script>
-	<script>
-		$(function(){
-			$('#keyboard').keyboard();
-		});
-	</script>
+
 </head>
 <body>
 
-<center>
-	<div id="wrap"><br><br><br><br>
-        <input id="keyboard" type="text">
-
-	</div>
+<center><br><br><br>
+    <textarea id="keyboard" type="text" onclick="show()"></textarea>
+    <br><br><br>
+    
+    <form id="show">
+        <input type="button" value="`" id="u0" name=0 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="1" id="u1" name=1 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="2" id="u2" name=2 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="3" id="u3" name=3 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="4" id="u4" name=4 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="5" id="u5" name=5 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="6" id="u6" name=6 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="7" id="u7" name=7 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="8" id="u8" name=8 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="9" id="u9" name=9 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="0" id="u10" name=10 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="-" id="u11" name=11 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="+" id="u12" name=12 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="Back space" onclick="back()" class="bt2">
+        <br>
+        <input type="button" value="Tab" onclick="tab()" class="bt2">
+        <input type="button" value="q" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="w" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="e" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="r" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="t" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="y" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="u" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="i" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="o" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="p" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="[" id="u13" name=13 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="]" id="u14" name=14 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="\" id="u15" name=15 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <br>
+        <input type="button" value="Caps lock" onclick="" class="bt2">
+        <input type="button" value="a" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="s" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="d" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="f" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="g" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="h" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="j" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="k" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="l" onclick="addup(this.value)" class="bt1">
+        <input type="button" value=";" id="u16" name=16 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="'" id="u17" name=17 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="enter" onclick="enter()" class="bt2">
+        <br>
+        <input type="button" value="Shift" onclick="hide()" class="bt3">
+        <input type="button" value="z" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="x" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="c" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="v" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="b" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="n" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="m" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="," id="u18" name=18 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="." id="u19" name=19 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="/" id="u20" name=20 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="done" onclick="hide()" class="bt2">
+    <br>
+        
+        <input type="button" value="settings" onclick="hide()" class="bt2">
+        <input type="button" value="space" onclick="space()" class="bt4">
+        <input type="button" value="emoji" onclick="hide()" class="bt2">
+        
+    
+    
+    
+    </form>
     </center>
 </body>
 </html>
