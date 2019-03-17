@@ -15,8 +15,36 @@ function change(id){
     document.getElementById(id).name=val;
 }
 
+function change2(id){
+    document.getElementById(id).value=rev[document.getElementById(id).value];
+}
+
 function addup(data){
+    //de();
     document.getElementById("keyboard").innerHTML += data;
+}
+
+function de(){
+    if(document.getElementById("caps").name=="m1"){
+        var i;
+        for(i=0;i<21;i++){
+            document.getElementById(i).value=rev2[i];
+            document.getElementById(i).name=i;
+        }
+    }
+    else{
+    var i;
+        for(i=21;i<=41;i++){
+            document.getElementById(i).value=rev2[i];
+            document.getElementById(i).name=i;
+        }
+    }
+}
+
+function ca(){
+    if(document.getElementById("caps").name=="m1"){document.getElementById("caps").name="m2";}
+    else{document.getElementById("caps").name="m1";}
+    //de();
 }
 
 function back(){
@@ -35,6 +63,10 @@ function enter(){
 
 function space(){
     document.getElementById("keyboard").innerHTML +=" ";
+}
+
+function del(){
+    document.getElementById("keyboard").innerHTML ="";
 }
 
 var rev={a:"A",b:"B",c:"C",d:"D",e:"E",f:"F",g:"G",h:"H",i:"I",j:"J",k:"K",l:"L",m:"M",n:"N",o:"O",p:"P",q:"Q",r:"R",s:"S",t:"T",u:"U",v:"V",w:"W",x:"X",y:"Y",z:"Z",A:"a",B:"b",C:"c",D:"d",E:"e",F:"f",G:"g",H:"h",I:"i",J:"j",K:"k",L:"l",M:"m",N:"n",O:"o",P:"p",Q:"q",R:"r",S:"s",T:"t",U:"u",V:"v",W:"w",X:"x",Y:"y",Z:"z"};
