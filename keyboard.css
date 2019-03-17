@@ -36,7 +36,8 @@ input{background-color: azure;
     font-family: cursive;
     font-size: 15px;
     font-weight: bold;
-}
+    outline-color:cornflowerblue; 
+ }
 
 form{padding: 20px;
     border: 2px solid black;
