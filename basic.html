@@ -8,13 +8,13 @@
 	<script src="jquery.keyboard.js"></script>
 
 </head>
-<body>
+<body onload="Full()">
 
-<center><br><br><br>
+<center><br><br><br><br><br><br>
     <textarea id="keyboard" type="text" onclick="show()"></textarea>
     <br><br><br>
-    
-    <form id="show" hidden>
+    <div>
+    <form id="show">
         <input type="button" value="`" id="0" name=0 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="1" id="1" name=1 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="2" id="2" name=2 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
@@ -28,60 +28,65 @@
         <input type="button" value="0" id="10" name=10 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="-" id="11" name=11 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="+" id="12" name=12 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="Back space" onclick="back()" class="bt2">
+        <input type="button" value="Bck spc" onmousedown="back()" class="bt2">
         <br>
         <input type="button" value="Tab" onclick="tab()" class="bt2">
-        <input type="button" value="q" id="q" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="w" id="w" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="e" id="e" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="r" id="r" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="t" id="t" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="y" id="y" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="u" id="u" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="i" id="i" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="o" id="o" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="p" id="p" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="q" id="117" onwheel="change2(this.id)" name=117 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="w" id="123" onwheel="change2(this.id)" name=123 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="e" id="105" onwheel="change2(this.id)" name=105 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="r" id="118" onwheel="change2(this.id)" name=118 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="t" id="120" onwheel="change2(this.id)" name=120 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="y" id="125" onwheel="change2(this.id)" name=125 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="u" id="121" onwheel="change2(this.id)" name=121 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="i" id="109" onwheel="change2(this.id)" name=109 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="o" id="115" onwheel="change2(this.id)" name=115 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="p" id="116" onwheel="change2(this.id)" name=116 onclick="addup(this.value)" class="bt1">
         <input type="button" value="[" id="13" name=13 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="]" id="14" name=14 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="\" id="15" name=15 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <br>
-        <input type="button" value="Caps" id="caps" name="m1" onclick="" class="bt2">
-        <input type="button" value="a" id="a" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="s" id="s" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="d" id="d" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="f" id="f" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="g" id="g" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="h" id="h" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="j" id="j" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="k" id="k" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="l" id="l" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="Caps" id="caps" name="m1" onclick="ca()" class="bt5">
+        <input type="button" value="a" id="101" onwheel="change2(this.id)" name=101 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="s" id="119" onwheel="change2(this.id)" name=119 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="d" id="104" onwheel="change2(this.id)" name=104 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="f" id="106" onwheel="change2(this.id)" name=106 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="g" id="107" onwheel="change2(this.id)" name=107 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="h" id="108" onwheel="change2(this.id)" name=108 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="j" id="110" onwheel="change2(this.id)" name=110 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="k" id="111" onwheel="change2(this.id)" name=111 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="l" id="112" onwheel="change2(this.id)" name=112 onclick="addup(this.value)" class="bt1">
         <input type="button" value=";" id="16" name=16 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="'" id="17" name=17 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="enter" onclick="enter()" class="bt2">
+        <input type="button" value="enter" onclick="enter()" class="bt5">
         <br>
         <input type="button" value="Shift" onclick="shift()" class="bt3">
-        <input type="button" value="z" id="z" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="x" id="x" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="c" id="c" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="v" id="v" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="b" id="b" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="n" id="n" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="m" id="m" onwheel="change2(this.id)" onclick="addup(this.value)" class="bt1">
+        <input type="button" value="z" id="126" onwheel="change2(this.id)" name=126 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="x" id="124" onwheel="change2(this.id)" name=124 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="c" id="103" onwheel="change2(this.id)" name=103 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="v" id="122" onwheel="change2(this.id)" name=122 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="b" id="102" onwheel="change2(this.id)" name=102 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="n" id="114" onwheel="change2(this.id)" name=114 onclick="addup(this.value)" class="bt1">
+        <input type="button" value="m" id="113" onwheel="change2(this.id)" name=113 onclick="addup(this.value)" class="bt1">
         <input type="button" value="," id="18" name=18 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="." id="19" name=19 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
         <input type="button" value="/" id="20" name=20 onwheel="change(this.id)" onclick="addup(this.value)" class="bt1">
-        <input type="button" value="done" onclick="hide()" class="bt2">
+        <input type="button" value="copy" onclick="copy()" class="bt5">
     <br>
         
-        <input type="button" value="settings" onclick="" class="bt2">
+        <input type="button" value="full scrn" onclick="Full()" class="bt5">
         <input type="button" value="space" onclick="space()" class="bt4">
-        <input type="button" value="emoji" onclick="" class="bt2">
-        <input type="button" value="X" onclick="del()" class="bt1">
+        <input type="button" value="X" onclick="del()" class="bt5">
         
-    
-    
-    
-    </form>
+        </form></div>
     </center>
-</body>
+    <script>
+        function Full() {
+        var elem = document.documentElement;
+            if (!document.fullscreenElement){
+            elem.requestFullscreen();}
+        else{document.exitFullscreen();}
+        }
+        Full();
+        </script>
+    </body>
 </html>

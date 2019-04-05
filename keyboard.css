@@ -1,46 +1,55 @@
-body{
+body{user-select: none;
     background-color: cadetblue;
+    padding: 0px;
 }
-textarea{
-    padding: 20px;
-    border-radius: 30px;
+textarea{border-radius: 30px;
+    pointer-events: none;
+    padding: 1%;
     font-family: cursive;
-    font-size: 120%;
+    font-size: 1.5vw;
     width: 50%;
-    height: 80px;
     background-color: azure;
     outline: none;
     overflow: auto;
 }
 ::-webkit-scrollbar {
-  width: 0px;
+  width: 0;
 }
 
 .bt1{width: 6%;
-height: 30px;}
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;}
 
 .bt2{width: 10%;
-height: 30px;}
+padding-top: 0.5%;
+padding-bottom: 0.5%;}
 
-.bt3{
-    width: 18%;
-    height: 30px;
-}
-.bt4{
-    width: 70%;
-    height: 30px;
-}
-input{background-color: azure;
-    border: 1px solid black;
-    margin: 1px;
+.bt3{width: 18.5%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;}
+
+.bt4{width: 74%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;}
+
+.bt5{width: 11.5%;
+padding-top: 0.5%;
+padding-bottom: 0.5%;}
+
+input{background-color: ghostwhite;
+    margin: 0.1vw;
+    margin-right: 0.3vw;
+    float: left;
     font-family: cursive;
-    font-size: 15px;
-    font-weight: bold;
-    outline-color:cornflowerblue; 
- }
+    font-size: 1vw;
+    font-weight: bold;}
 
-form{padding: 20px;
-    border: 2px solid black;
+input:focus{box-shadow: 1px 1px 4px;
+    background-color: white;
+    outline: none;}
+
+form {padding: 1%;
     width: 50%;
-    background-color: #c4f2f2;
-}
+    background-color: aliceblue;
+    overflow: hidden;
+border-radius: 20px;}
